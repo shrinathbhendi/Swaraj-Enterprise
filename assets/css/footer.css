@@ -1,0 +1,98 @@
+/* ==========================================================================
+   FOOTER STYLESHEET
+   ========================================================================== */
+
+footer {
+  background-color: var(--primary-navy);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 4rem 0 2rem 0;
+  border-top: 4px solid var(--accent-yellow);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.footer-col h4 {
+  color: var(--accent-yellow);
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background-color: var(--accent-yellow);
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent-yellow);
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+/* Footer Responsive Rules */
+@media (max-width: 992px) {
+  footer {
+    padding: 3rem 0 2rem 0;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+    padding: 2.5rem 0 1.5rem 0;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
+}

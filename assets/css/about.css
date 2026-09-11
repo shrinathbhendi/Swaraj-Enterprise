@@ -1,0 +1,205 @@
+/* ==========================================================================
+   ABOUT US PAGE STYLESHEET
+   ========================================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.about-image-stack {
+  position: relative;
+  padding: 16px;
+  z-index: 1;
+}
+
+.about-img-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  background: linear-gradient(135deg, #051329 0%, #0E294B 60%, #FF7A00 100%);
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.95;
+  box-shadow: 0 15px 35px rgba(5, 19, 41, 0.18);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.about-image-stack:hover .about-img-backdrop {
+  transform: translate(-6px, -6px) scale(1.02);
+}
+
+.about-img-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(5, 19, 41, 0.22);
+  border: 3px solid #ffffff;
+  background: #051329;
+}
+
+.about-img-frame img.about-img-main {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.about-image-stack:hover .about-img-frame img.about-img-main {
+  transform: scale(1.05);
+}
+
+/* Industrial Corner Brackets */
+.frame-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #FF7A00;
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.corner-tl { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+.corner-tr { top: 12px; right: 12px; border-left: none; border-bottom: none; }
+.corner-bl { bottom: 12px; left: 12px; border-right: none; border-top: none; }
+.corner-br { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+
+.about-image-stack:hover .frame-corner {
+  width: 24px;
+  height: 24px;
+  border-color: #ffffff;
+}
+
+/* Floating Badges */
+.about-floating-badge {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.about-floating-badge.badge-top {
+  top: -6px;
+  right: -6px;
+  padding: 0.55rem 1.15rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #051329 0%, #0E294B 100%);
+  border: 1px solid rgba(255, 122, 0, 0.5);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.about-floating-badge.badge-top i {
+  color: #FF7A00;
+  font-size: 0.95rem;
+}
+
+.about-floating-badge.badge-bottom {
+  bottom: -6px;
+  left: -6px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #051329;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 16px 36px rgba(5, 19, 41, 0.16);
+}
+
+.about-floating-badge.badge-bottom .badge-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #FF7A00, #E66A00);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.35);
+}
+
+.about-floating-badge.badge-bottom .badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-floating-badge.badge-bottom .badge-info strong {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #051329;
+  line-height: 1.2;
+}
+
+.about-floating-badge.badge-bottom .badge-info span {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.about-image-stack:hover .about-floating-badge {
+  transform: translateY(-4px);
+}
+
+.about-feature-list {
+  margin: 1.5rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.about-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.about-feature-item i {
+  color: var(--accent-yellow);
+  background: var(--primary-blue);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* About Page Responsive Rules */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-image-stack {
+    margin-bottom: 1.5rem;
+  }
+  .experience-badge {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.85rem 1.1rem;
+    border-width: 3px;
+  }
+  .experience-badge .years {
+    font-size: 1.8rem;
+  }
+  .experience-badge .label {
+    font-size: 0.72rem;
+  }
+}

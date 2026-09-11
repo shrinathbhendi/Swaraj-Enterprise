@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Showcase & Gallery - Swaraj Enterprise, Pune</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Header Bar with Social Media & Email -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <div class="top-info-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+919890000000" style="color: inherit; font-weight: 600;">+91 98900 00000</a>
+        </div>
+        <div class="top-info-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@swarajenterprisepune.com" style="color: inherit;">info@swarajenterprisepune.com</a>
+        </div>
+      </div>
+      <div class="top-social">
+        <span style="font-size: 0.8rem; color: rgba(255,255,255,0.75); margin-right: 0.2rem;">Follow Us:</span>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/919890000000" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-brand">
+        <img src="assets/img/logo.png" alt="Swaraj Enterprise Logo" class="logo-img">
+        <div class="brand-text">
+          <span class="brand-name">SWARAJ <span>ENTERPRISE</span></span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-primary open-quote-modal">
+          <i class="fas fa-paper-plane"></i> Instant Quote
+        </button>
+      </div>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="section section-bg-blue" style="background: linear-gradient(135deg, var(--primary-dark-blue), var(--primary-blue)); padding: 4rem 0 3rem 0;">
+    <div class="container text-center">
+      <span class="section-tag" style="background: rgba(255,122,0,0.2); color: var(--accent-yellow); border-color: rgba(255,122,0,0.4);">Portfolio Showcase</span>
+      <h1 style="font-size: 2.8rem; color: white; margin-bottom: 0.5rem;">Project Photo Gallery</h1>
+      <p style="color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto;">Explore our precision electroplating samples, electropolishing finishes, and factory infrastructure in Pune.</p>
+    </div>
+  </section>
+
+  <!-- Interactive Filterable Gallery -->
+  <section class="section section-bg-light">
+    <div class="container">
+      
+      <!-- Filter Buttons -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="electropolishing">Electropolishing & SS</button>
+        <button class="filter-btn" data-filter="copper">Copper Plating</button>
+        <button class="filter-btn" data-filter="polishing">Brass Polishing</button>
+        <button class="filter-btn" data-filter="antique">Antique Coating</button>
+        <button class="filter-btn" data-filter="chrome">Chrome & Automotive</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        
+        <div class="gallery-item" data-category="electropolishing">
+          <img src="assets/img/photo1.png" alt="SS Floor Drain Trap & Jali Assembly">
+          <div class="gallery-overlay">
+            <h4>SS Floor Drain Trap & Jali Assembly</h4>
+            <p>Sanitary Electropolished Finish @ ₹ 180 / Piece</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="electropolishing">
+          <img src="assets/img/photo2.png" alt="SS Industrial Pressure Vessels & Reaction Columns">
+          <div class="gallery-overlay">
+            <h4>Industrial SS Pressure Vessels & Columns</h4>
+            <p>Internal & External Mirror Passivation (ASTM A967)</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="chrome">
+          <img src="assets/img/photo4.png" alt="Bike Spare Parts Bright Chrome Plating">
+          <div class="gallery-overlay">
+            <h4>Bike Spare Parts Bright Chrome Plating</h4>
+            <p>96+ Hr Salt Spray Automotive Chrome @ ₹ 4 / Sq. Inch</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="copper">
+          <img src="assets/img/photo5.png" alt="Copper Electroplated Fasteners & Threaded Bolts">
+          <div class="gallery-overlay">
+            <h4>Copper Electroplated Bolts & Fasteners</h4>
+            <p>High Conductivity Electrolytic Copper @ ₹ 150 / Kg</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="polishing">
+          <img src="assets/img/photo6.png" alt="Brass Polishing Service">
+          <div class="gallery-overlay">
+            <h4>Brass Polishing Service</h4>
+            <p>High-Luster Mirror Polish & Clear Anti-Tarnish Coating @ ₹ 100 / Piece</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="antique">
+          <img src="assets/img/photo7.png" alt="Antique Finishing Coating Services">
+          <div class="gallery-overlay">
+            <h4>Antique Finishing Coating Services</h4>
+            <p>Matt Aged Patina & Vintage Decorative Surface Finish @ ₹ 2,500 / Sq. Ft</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Modal Popup -->
+  <div class="modal-overlay" id="quote-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="close-quote-modal">&times;</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <h3 style="color: var(--primary-dark-blue); font-size: 1.5rem;">Get Instant Quotation</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Fill in your plating requirements & team will call you back within 2 hours.</p>
+      </div>
+
+      <form id="quote-form">
+        <div class="form-group">
+          <label for="modal-name">Full Name / Company Name</label>
+          <input type="text" id="modal-name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-phone">Phone / WhatsApp Number</label>
+          <input type="tel" id="modal-phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-service">Required Service</label>
+          <select id="modal-service" class="form-control" required>
+            <option value="SS Floor Drain Trap & Jali Assembly">SS Floor Drain Trap & Jali Assembly</option>
+            <option value="Industrial SS Pressure Vessels">Industrial SS Pressure Vessels & Columns</option>
+            <option value="Bike Spare Parts Bright Chrome Plating">Bike Spare Parts Bright Chrome Plating</option>
+            <option value="Copper Electroplated Bolts">Copper Electroplated Bolts & Fasteners</option>
+            <option value="Brass Polishing Service">Brass Polishing Service</option>
+            <option value="Antique Finishing Coating Services">Antique Finishing Coating Services</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modal-message">Estimated Quantity / Notes</label>
+          <textarea id="modal-message" class="form-control" placeholder="Dimensions, material type, quantity..." rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem; font-size: 1rem;">
+          Submit Inquiry <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>

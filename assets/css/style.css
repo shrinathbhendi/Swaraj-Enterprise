@@ -1,0 +1,14 @@
+/* ==========================================================================
+   SWARAJ ENTERPRISE PUNE - MAIN BUNDLE STYLESHEET
+   This file imports all modular CSS components for full backward compatibility.
+   ========================================================================== */
+
+@import url('./global.css');
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./index.css');
+@import url('./about.css');
+@import url('./products.css');
+@import url('./gallery.css');
+@import url('./clients.css');
+@import url('./contact.css');
