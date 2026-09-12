@@ -707,6 +707,154 @@
     </div>
   </section>
 
+  <!-- Client Review Section -->
+  <section class="client-review-section section section-bg-white">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="section-tag why-tag" style="background-color: var(--primary-light-blue, #e0f2fe); color: var(--primary-dark-blue, #0369a1);">Client Reviews</span>
+        <h2 class="section-title">What Our Industrial Partners Say</h2>
+        <p class="section-subtitle text-muted">Read feedback from our trusted OEMs and manufacturing clients.</p>
+      </div>
+
+      <style>
+        .review-carousel-container {
+          position: relative;
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 20px 10px;
+        }
+        .review-carousel {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          scroll-behavior: smooth;
+          gap: 2rem;
+          padding: 10px; /* added padding so box-shadow does not get cut off */
+        }
+        .review-carousel::-webkit-scrollbar {
+          display: none;
+        }
+        .review-card {
+          scroll-snap-align: center;
+          flex: 0 0 calc(100% - 20px); /* Account for padding */
+          margin: 0 10px;
+          background: linear-gradient(135deg, var(--primary-dark-blue, #1e3a8a) 0%, #3b82f6 100%);
+          color: #ffffff;
+          border-radius: 30px; /* Fully rounded shape */
+          border: 3px solid #93c5fd; /* Added border */
+          padding: 3rem;
+          box-shadow: 0 12px 28px rgba(59, 130, 246, 0.35);
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          min-height: 280px;
+          box-sizing: border-box;
+          position: relative;
+        }
+        .review-carousel-btns {
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+          margin-top: 1rem;
+        }
+        .review-btn {
+          background: #e2e8f0;
+          color: #1e3a8a;
+          border: none;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .review-btn:hover {
+          background: var(--primary-orange, #f97316);
+          color: #ffffff;
+          transform: scale(1.1);
+        }
+      </style>
+
+      <div class="review-carousel-container">
+        <div class="review-carousel" id="reviewCarousel">
+          <div class="review-card">
+            <div class="review-stars" style="color: #fbbf24; margin-bottom: 1.25rem; font-size: 1.4rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #ffffff;">Excellent Quality</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #e2e8f0; max-width: 700px; line-height: 1.6;">"Swaraj Enterprise has consistently delivered flawless nickel plating for our automotive components. Their 24-hour turnaround time is unmatched in Pune."</p>
+            <div style="font-weight: 700; color: #bae6fd; font-size: 1.15rem;">- Ramesh K., OEM Supplier</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars" style="color: #fbbf24; margin-bottom: 1.25rem; font-size: 1.4rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #ffffff;">Highly Reliable Partner</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #e2e8f0; max-width: 700px; line-height: 1.6;">"We rely on them for high-volume copper plating. Their attention to micron tolerances and zero-defect policy has improved our product lifecycle."</p>
+            <div style="font-weight: 700; color: #bae6fd; font-size: 1.15rem;">- Amit S., Manufacturer</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars" style="color: #fbbf24; margin-bottom: 1.25rem; font-size: 1.4rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #ffffff;">Transparent Pricing</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #e2e8f0; max-width: 700px; line-height: 1.6;">"The pricing is fair and their X-Ray thickness reports provide complete peace of mind. Highly recommend them for heavy-duty metal finishing."</p>
+            <div style="font-weight: 700; color: #bae6fd; font-size: 1.15rem;">- Priya M., Engineering Firm</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars" style="color: #fbbf24; margin-bottom: 1.25rem; font-size: 1.4rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #ffffff;">Great Communication</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #e2e8f0; max-width: 700px; line-height: 1.6;">"The team is responsive and understands our technical specs perfectly. The brass polishing and antique finishing they did for us was top tier."</p>
+            <div style="font-weight: 700; color: #bae6fd; font-size: 1.15rem;">- Sandeep R., Architect</div>
+          </div>
+        </div>
+        
+        <div class="review-carousel-btns">
+          <button class="review-btn" onclick="scrollReview(-1)"><i class="fas fa-chevron-left"></i></button>
+          <button class="review-btn" onclick="scrollReview(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      
+      <script>
+        const reviewCarousel = document.getElementById('reviewCarousel');
+        let reviewInterval = setInterval(autoScroll, 4000);
+
+        function autoScroll() {
+          if (!reviewCarousel) return;
+          const scrollAmount = reviewCarousel.clientWidth;
+          
+          if (reviewCarousel.scrollLeft >= (reviewCarousel.scrollWidth - reviewCarousel.clientWidth - 20)) {
+            reviewCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            reviewCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          }
+        }
+
+        function scrollReview(direction) {
+          clearInterval(reviewInterval);
+          if (!reviewCarousel) return;
+          
+          const scrollAmount = reviewCarousel.clientWidth;
+          
+          if (direction === -1 && reviewCarousel.scrollLeft <= 0) {
+             reviewCarousel.scrollTo({ left: reviewCarousel.scrollWidth, behavior: 'smooth' });
+          } else if (direction === 1 && reviewCarousel.scrollLeft >= (reviewCarousel.scrollWidth - reviewCarousel.clientWidth - 20)) {
+             reviewCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+             reviewCarousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+          }
+          
+          reviewInterval = setInterval(autoScroll, 4000);
+        }
+      </script>
+    </div>
+  </section>
+
 
 
 
