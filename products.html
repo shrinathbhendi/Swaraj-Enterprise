@@ -23,7 +23,7 @@
       <div class="top-info">
         <div class="top-info-item">
           <i class="fas fa-phone-alt"></i>
-          <a href="tel:+919890000000" style="color: inherit; font-weight: 600;">+91 98900 00000</a>
+          <a href="tel:+919960098355" style="color: inherit; font-weight: 600;">+91 99600 98355</a>
         </div>
         <div class="top-info-item">
           <i class="fas fa-envelope"></i>
@@ -34,7 +34,7 @@
         <span style="font-size: 0.8rem; color: rgba(255,255,255,0.75); margin-right: 0.2rem;">Follow Us:</span>
         <a href="https://facebook.com" target="_blank" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/919890000000" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/919960098355" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://instagram.com" target="_blank" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
@@ -53,7 +53,18 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li class="nav-item dropdown">
+            <a href="products.html" class="nav-link active">Products <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="products.html?category=plating"><i class="fas fa-shield-alt"></i> Plating Service</a></li>
+              <li><a href="products.html?category=electropolishing"><i class="fas fa-bolt"></i> Electropolishing Services</a></li>
+              <li><a href="products.html?category=electroplating"><i class="fas fa-plug"></i> Electroplating Service</a></li>
+              <li><a href="products.html?category=metal-polishing"><i class="fas fa-magic"></i> Metal Polishing Service</a></li>
+              <li><a href="products.html?category=nickel-plating"><i class="fas fa-coins"></i> Nickel Plating Service</a></li>
+              <li><a href="products.html?category=polishing"><i class="fas fa-spray-can"></i> Polishing Service</a></li>
+              <li><a href="products.html?category=buffing"><i class="fas fa-hand-sparkles"></i> Buffing Services</a></li>
+            </ul>
+          </li>
           <li><a href="gallery.html" class="nav-link">Gallery</a></li>
           <li><a href="contact.html" class="nav-link">Contact Us</a></li>
         </ul>
@@ -72,7 +83,7 @@
   </header>
 
   <!-- Banner -->
-  <section class="section section-bg-blue" style="background: linear-gradient(135deg, var(--primary-dark-blue), var(--primary-blue)); padding: 4rem 0 3rem 0;">
+  <section class="section section-bg-blue" style="background: linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.75)), url('assets/img/products_banner_dark.png') center/cover no-repeat; padding: 4rem 0 3rem 0;">
     <div class="container text-center">
       <span class="section-tag" style="background: rgba(255,122,0,0.2); color: var(--accent-yellow); border-color: rgba(255,122,0,0.4);">Official Product Catalog</span>
       <h1 style="font-size: 2.8rem; color: white; margin-bottom: 0.5rem;">Products & Pricing</h1>
@@ -83,125 +94,85 @@
   <!-- Product Catalog Grid -->
   <section class="section section-bg-light">
     <div class="container">
-      <div class="catalog-grid-side-by-side">
+      
+  
+  <div class="product-filter-pills-container">
+    <button class="filter-pill active" data-filter="all">All Categories</button>
+    <button class="filter-pill" data-filter="Plating Service">Plating Service</button>
+    <button class="filter-pill" data-filter="Electropolishing Services">Electropolishing Services</button>
+    <button class="filter-pill" data-filter="Electroplating Service">Electroplating Service</button>
+    <button class="filter-pill" data-filter="Metal Polishing Service">Metal Polishing Service</button>
+    <button class="filter-pill" data-filter="Nickel Plating Service">Nickel Plating Service</button>
+    <button class="filter-pill" data-filter="Polishing Service">Polishing Service</button>
+    <button class="filter-pill" data-filter="Buffing Services">Buffing Services</button>
+  </div>
+
+
+  <div class="catalog-grid-side-by-side">
 
         <!-- Product 1: SS Floor Drain Trap & Jali Assembly -->
-        <div class="service-card-compact">
+        <div class="service-card-compact" data-category="Electropolishing Services">
           <div class="card-image-header">
             <img src="assets/img/photo1.png" alt="SS Floor Drain Trap & Jali Assembly">
-            <span class="card-tag">Sanitary Grade</span>
-            <div class="photo-overlay-badge">
-              <i class="fas fa-camera"></i> Verified Product Photo
             </div>
-          </div>
           <div class="card-content">
             <div>
               <h3>SS Floor Drain Trap & Jali Assembly</h3>
               <p>Heavy-duty SS 304 / SS 316 square drain cover plate with integrated anti-odor cup trap and removable perforated waste filter basket.</p>
-              <div class="price-rate"><i class="fas fa-rupee-sign"></i> 180 <span>/ Piece</span></div>
-              <ul class="product-specs-list">
-                <li><i class="fas fa-check-circle"></i> Material: Heavy Duty SS 304 / SS 316 Grade</li>
-                <li><i class="fas fa-check-circle"></i> Anti-clogging & pest-proof water seal trap</li>
-                <li><i class="fas fa-check-circle"></i> Electropolished ultra-smooth hygienic finish</li>
-              </ul>
+              
+              
             </div>
             <div class="card-footer-action">
-              <button class="btn btn-primary open-quote-modal">
-                Request Price Quote <i class="fas fa-paper-plane"></i>
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
               </button>
             </div>
           </div>
         </div>
 
         <!-- Product 2: Industrial SS Pressure Vessels -->
-        <div class="service-card-compact">
+        <div class="service-card-compact" data-category="Electropolishing Services">
           <div class="card-image-header">
             <img src="assets/img/photo2.png" alt="Industrial SS Pressure Vessels & Filtration Columns">
-            <span class="card-tag">High Mirror Finish</span>
-            <div class="photo-overlay-badge">
-              <i class="fas fa-camera"></i> Verified Product Photo
             </div>
-          </div>
           <div class="card-content">
             <div>
               <h3>Industrial SS Pressure Vessels & Columns</h3>
               <p>Large-capacity stainless steel cylindrical pressure tanks, reaction vessels, and filtration columns with flanged nozzle connections.</p>
-              <div class="price-rate"><i class="fas fa-tag"></i> Custom Quote</div>
-              <ul class="product-specs-list">
-                <li><i class="fas fa-check-circle"></i> Internal & External Electropolishing (Ra &lt; 0.2µm)</li>
-                <li><i class="fas fa-check-circle"></i> ASTM A967 chemical passivation compliant</li>
-                <li><i class="fas fa-check-circle"></i> Heavy wall thickness for high-pressure durability</li>
-              </ul>
+              
+              
             </div>
             <div class="card-footer-action">
-              <button class="btn btn-primary open-quote-modal">
-                Request Price Quote <i class="fas fa-paper-plane"></i>
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Product 3: Bike Spare Parts Bright Chrome Plating -->
-        <div class="service-card-compact">
-          <div class="card-image-header">
-            <img src="assets/img/photo4.png" alt="Bike Spare Parts Bright Chrome Plating">
-            <span class="card-tag">Automotive Special</span>
-            <div class="photo-overlay-badge">
-              <i class="fas fa-camera"></i> Verified Product Photo
-            </div>
-          </div>
-          <div class="card-content">
-            <div>
-              <h3>Bike Spare Parts Bright Chrome Plating</h3>
-              <p>Triple-layer copper-nickel-chrome electroplating for motorcycle tubular leg guards, engine crash frames, handle bars, and rims.</p>
-              <div class="price-rate"><i class="fas fa-rupee-sign"></i> 4 <span>/ Sq. Inch</span></div>
-              <ul class="product-specs-list">
-                <li><i class="fas fa-check-circle"></i> High-shine mirror chrome luster finish</li>
-                <li><i class="fas fa-check-circle"></i> 96+ Hours Salt Spray rust & weather resistant</li>
-                <li><i class="fas fa-check-circle"></i> Anti-peeling adhesion on bent tubular steel</li>
-              </ul>
-            </div>
-            <div class="card-footer-action">
-              <button class="btn btn-primary open-quote-modal">
-                Request Price Quote <i class="fas fa-paper-plane"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 5: Copper Plated Industrial Bolts & Fasteners -->
-        <div class="service-card-compact">
+        <div class="service-card-compact" data-category="Electroplating Service">
           <div class="card-image-header">
             <img src="assets/img/photo5.png" alt="Copper Electroplated Fasteners & Threaded Bolts">
-            <span class="card-tag">High Conductivity</span>
-            <div class="photo-overlay-badge">
-              <i class="fas fa-camera"></i> Verified Product Photo
             </div>
-          </div>
           <div class="card-content">
             <div>
               <h3>Copper Electroplated Bolts & Fasteners</h3>
               <p>Electrolytic pure copper plating on industrial bolts, studs, and flange washers for anti-galling and electrical grounding applications.</p>
-              <div class="price-rate"><i class="fas fa-rupee-sign"></i> 150 <span>/ Kg</span></div>
-              <ul class="product-specs-list">
-                <li><i class="fas fa-check-circle"></i> 5 to 30 Microns customizable copper coating</li>
-                <li><i class="fas fa-check-circle"></i> Superior electrical & thermal conductivity</li>
-                <li><i class="fas fa-check-circle"></i> Heavy duty switchgear & busbar mounting</li>
-              </ul>
+              
+              
             </div>
             <div class="card-footer-action">
-              <button class="btn btn-primary open-quote-modal">
-                Request Price Quote <i class="fas fa-paper-plane"></i>
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
               </button>
             </div>
           </div>
         </div>
 
         <!-- Product 5: Brass Polishing Service -->
-        <div class="service-card-compact">
+        <div class="service-card-compact" data-category="Polishing Service">
           <div class="card-image-header">
             <img src="assets/img/photo6.png" alt="Brass Polishing Service">
-            <span class="card-tag">Mirror Buffing</span>
             <div class="photo-overlay-badge">
               <i class="fas fa-camera"></i> Verified Service Photo
             </div>
@@ -210,26 +181,21 @@
             <div>
               <h3>Brass Polishing Service</h3>
               <p>High-shine mirror polishing, surface buffing, and anti-tarnish protective clear coating for decorative brassware, vessels, and statues.</p>
-              <div class="price-rate"><i class="fas fa-rupee-sign"></i> 100 <span>/ Piece</span></div>
-              <ul class="product-specs-list">
-                <li><i class="fas fa-check-circle"></i> Service Duration: 2 Days Turnaround in Pune</li>
-                <li><i class="fas fa-check-circle"></i> High-luster mirror polish & oxide removal</li>
-                <li><i class="fas fa-check-circle"></i> Anti-tarnish protective clear coating</li>
-              </ul>
+              
+              
             </div>
             <div class="card-footer-action">
-              <button class="btn btn-primary open-quote-modal">
-                Request Price Quote <i class="fas fa-paper-plane"></i>
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
               </button>
             </div>
           </div>
         </div>
 
         <!-- Product 6: Antique Finishing Coating Services -->
-        <div class="service-card-compact">
+        <div class="service-card-compact" data-category="Polishing Service">
           <div class="card-image-header">
             <img src="assets/img/photo7.png" alt="Antique Finishing Coating Services">
-            <span class="card-tag">Decorative Patina</span>
             <div class="photo-overlay-badge">
               <i class="fas fa-camera"></i> Verified Service Photo
             </div>
@@ -238,24 +204,296 @@
             <div>
               <h3>Antique Finishing Coating Services</h3>
               <p>Premium decorative surface treatment creating rich aged textures, distressed metallic patinas, and timeless antique finishes for interior metal decor.</p>
-              <div class="price-rate"><i class="fas fa-rupee-sign"></i> 2,500 <span>/ Sq. Ft</span></div>
-              <ul class="product-specs-list">
-                <li><i class="fas fa-check-circle"></i> Finish Type: Matt / Aged Antique Patina</li>
-                <li><i class="fas fa-check-circle"></i> Fast Processing: 12 Hrs Processing / 2 Days Delivery</li>
-                <li><i class="fas fa-check-circle"></i> Executed by master technicians (10+ Yrs Exp)</li>
-              </ul>
+              
+              
             </div>
             <div class="card-footer-action">
-              <button class="btn btn-primary open-quote-modal">
-                Request Price Quote <i class="fas fa-paper-plane"></i>
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
               </button>
             </div>
           </div>
         </div>
 
-      </div>
+      
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Electroplating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat1.png" alt="Electroplated Copper Busbar">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Electroplated Copper Busbar</h3>
+              <p>High conductivity copper busbars with premium electroplating for optimal electrical performance.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Electroplating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat2.png" alt="Copper Electroplated Fasteners">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Copper Electroplated Fasteners</h3>
+              <p>Precision copper plating on industrial fasteners for enhanced conductivity and anti-galling properties.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Nickel Plating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat3.png" alt="Nickel Plated Brass Fittings">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Nickel Plated Brass Fittings</h3>
+              <p>Durable and corrosion-resistant bright nickel plating on precision brass fittings.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Electropolishing Services">
+          <div class="card-image-header">
+            <img src="assets/img/producat4.png" alt="Electropolished SS Filter Housing">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Electropolished SS Filter Housing</h3>
+              <p>Ultra-smooth electropolished finish for stainless steel filter housings, ideal for pharma applications.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Plating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat5.png" alt="Custom Surface Treatment">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Custom Surface Treatment</h3>
+              <p>Specialized surface treatments providing enhanced wear resistance and aesthetic appeal.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Electropolishing Services">
+          <div class="card-image-header">
+            <img src="assets/img/producat6.png" alt="SS Sanitization Trap">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>SS Sanitization Trap</h3>
+              <p>High-grade stainless steel sanitization traps with flawless surface finish for cleanroom environments.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Electroplating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat8.png" alt="Silver Plated Electrical Contacts">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Silver Plated Electrical Contacts</h3>
+              <p>High-purity silver plating on electrical contacts for superior conductivity and low contact resistance.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Plating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat9.png" alt="Tin Plated Copper Strip">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Tin Plated Copper Strip</h3>
+              <p>Quality tin plating on copper strips to prevent oxidation and ensure excellent solderability.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Metal Polishing Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat11.png" alt="Precision Metal Component">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Precision Metal Component</h3>
+              <p>Custom precision metal components with tailored surface finishing for industrial applications.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Plating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat12.png" alt="Industrial Metal Fitting">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Industrial Metal Fitting</h3>
+              <p>Heavy-duty industrial metal fittings treated for maximum durability in harsh environments.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Plating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat13.png" alt="Surface Finished Part">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Surface Finished Part</h3>
+              <p>Specially polished metal parts offering both functional performance and premium aesthetics.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Electropolishing Services">
+          <div class="card-image-header">
+            <img src="assets/img/producat14.png" alt="Industrial SS Pressure Vessel">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Industrial SS Pressure Vessel</h3>
+              <p>Robust stainless steel pressure vessels featuring high-quality internal and external finishes.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Plating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat15.png" alt="Plated Engineering Component">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Plated Engineering Component</h3>
+              <p>Engineered metal components featuring advanced plating for superior corrosion resistance.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product -->
+        <div class="service-card-compact" data-category="Plating Service">
+          <div class="card-image-header">
+            <img src="assets/img/producat16.png" alt="Coated Industrial Fastener">
+            </div>
+          <div class="card-content">
+            <div>
+              <h3>Coated Industrial Fastener</h3>
+              <p>Industrial fasteners with specialized coatings designed to withstand extreme weather conditions.</p>
+              
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary open-details-modal">
+                Check Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+</div>
     </div>
   </section>
+
+  
+  <!-- Product Details Modal Popup -->
+  <div class="modal-overlay" id="details-modal">
+    <div class="modal-card details-modal-card">
+      <button class="modal-close" id="close-details-modal">&times;</button>
+      
+      <div class="details-modal-content">
+        <div class="details-image-col">
+          <img src="" id="details-modal-img" alt="Product Image">
+        </div>
+        <div class="details-info-col">
+          <span class="card-tag" id="details-modal-tag" style="position: static; display: inline-block; margin-bottom: 1rem;"></span>
+          <h3 id="details-modal-title" style="color: var(--primary-dark-blue); font-size: 1.8rem; margin-bottom: 1rem;"></h3>
+          <p id="details-modal-desc" style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;"></p>
+          
+          <button class="btn btn-primary" id="details-to-quote-btn" style="width: 100%; padding: 0.9rem; font-size: 1rem;">
+            Request Price Quote <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Quote Modal Popup -->
   <div class="modal-overlay" id="quote-modal">
@@ -280,7 +518,7 @@
           <select id="modal-service" class="form-control" required>
             <option value="SS Floor Drain Trap & Jali Assembly">SS Floor Drain Trap & Jali Assembly (₹ 180/Piece)</option>
             <option value="Industrial SS Pressure Vessels">Industrial SS Pressure Vessels & Columns (Custom Quote)</option>
-            <option value="Bike Spare Parts Bright Chrome Plating">Bike Spare Parts Bright Chrome Plating (₹ 4/Sq Inch)</option>
+            
             <option value="Copper Electroplated Bolts">Copper Electroplated Bolts & Fasteners (₹ 150/Kg)</option>
             <option value="Brass Polishing Service">Brass Polishing Service (₹ 100/Piece)</option>
             <option value="Antique Finishing Coating Services">Antique Finishing Coating Services (₹ 2,500/Sq Ft)</option>
@@ -297,7 +535,78 @@
     </div>
   </div>
 
-  <div id="footer-placeholder"></div>
+  <footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-brand" style="margin-bottom: 1rem;">
+          <img src="assets/img/logo.png" alt="Swaraj Enterprise Logo" class="logo-img" style="height: 48px; background: white; padding: 4px; border-radius: 6px;">
+          <div class="brand-text">
+            <span class="brand-name" style="color: white;">SWARAJ <span>ENTERPRISE</span></span>
+            <span class="brand-tagline" style="color: var(--accent-yellow);">Plating & Surface Finishing</span>
+          </div>
+        </div>
+        <p>Premier electroplating & electropolishing service provider in Pune, Maharashtra. Delivering high-precision metal finishing for automotive, industrial, and electrical components since 2017.</p>
+        <div style="display: flex; gap: 0.75rem; font-size: 1.1rem;">
+          <a href="#" style="color: var(--accent-yellow); background: rgba(255,255,255,0.1); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" style="color: var(--accent-yellow); background: rgba(255,255,255,0.1); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" style="color: var(--accent-yellow); background: rgba(255,255,255,0.1); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="color: var(--accent-yellow); font-size: 0.75rem; margin-right: 0.4rem;"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="color: var(--accent-yellow); font-size: 0.75rem; margin-right: 0.4rem;"></i> About Us</a></li>
+          <li><a href="products.html"><i class="fas fa-chevron-right" style="color: var(--accent-yellow); font-size: 0.75rem; margin-right: 0.4rem;"></i> Products</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right" style="color: var(--accent-yellow); font-size: 0.75rem; margin-right: 0.4rem;"></i> Gallery</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right" style="color: var(--accent-yellow); font-size: 0.75rem; margin-right: 0.4rem;"></i> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Products</h4>
+        <ul class="footer-links">
+          <li><a href="products.html">Electropolishing Services</a></li>
+          <li><a href="products.html">Copper Electroplating</a></li>
+          <li><a href="products.html">Electroless Nickel Plating</a></li>
+          <li><a href="products.html">Bright Nickel Plating</a></li>
+          <li><a href="products.html">Tin Electroplating</a></li>
+          <li><a href="products.html">Bead Blasting & Metal Buffing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem;">
+          <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <i class="fas fa-map-marker-alt" style="color: var(--accent-yellow); margin-top: 0.2rem;"></i>
+            <span>Swaraj Enterprise, Pune, Maharashtra 411041, India</span>
+          </div>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <i class="fas fa-phone-alt" style="color: var(--accent-yellow);"></i>
+            <a href="tel:+919960098355" style="color: white; font-weight: 700;">+91 99600 98355 / Call Now</a>
+          </div>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <i class="fas fa-envelope" style="color: var(--accent-yellow);"></i>
+            <span>info@swarajenterprisepune.com</span>
+          </div>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <i class="fas fa-check-circle" style="color: #4ADE80;"></i>
+            <span style="color: #4ADE80; font-weight: 600;">GST Verified Supplier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year">2026</span> Swaraj Enterprise, Pune. All Rights Reserved.</p>
+      <p class="developed-by">Developed By <span class="dev-company">MindAxis Innovation Pvt Ltd.</span></p>
+    </div>
+  </div>
+</footer>
+
   <script src="assets/js/main.js"></script>
   <script src="assets/js/products.js"></script>
 </body>

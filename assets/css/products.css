@@ -258,3 +258,111 @@
     width: 100%;
   }
 }
+
+/* Product Filter Bar */
+.product-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  padding: 0.55rem 1.25rem;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-dark-blue);
+  transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--accent-yellow);
+  color: white;
+  border-color: var(--accent-yellow);
+  box-shadow: 0 4px 10px rgba(255, 122, 0, 0.25);
+}
+
+
+/* Product Details Modal Styles */
+.details-modal-card {
+  max-width: 800px;
+  width: 90%;
+  padding: 2.5rem;
+}
+
+.details-modal-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.details-image-col {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-image-col img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.details-info-col {
+  flex: 1;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .details-modal-content {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+/* Category Pill Filters */
+.product-filter-pills-container {
+  max-width: 1240px;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.filter-pill {
+  background: #ffffff;
+  color: var(--primary-dark-blue);
+  border: 1px solid var(--border-light);
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.filter-pill:hover {
+  border-color: var(--accent-yellow);
+  color: var(--accent-yellow);
+}
+
+.filter-pill.active {
+  background: var(--accent-yellow);
+  color: #ffffff;
+  border-color: var(--accent-yellow);
+  box-shadow: 0 4px 12px rgba(253, 184, 19, 0.3);
+}

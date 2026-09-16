@@ -1783,3 +1783,64 @@
 }
 
 
+
+/* Hero Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-content {
+  animation: slideInLeft 1.2s ease-out forwards;
+}
+
+.hero-slider-wrapper {
+  animation: slideInRight 1.2s ease-out forwards;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-image-stack {
+  animation: slideInLeft 1.2s ease-out forwards;
+}
+
+.about-grid > div:not(.about-image-stack) {
+  animation: slideInUp 1.2s ease-out forwards;
+}
+
+/* Scroll Animations */
+.animate-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

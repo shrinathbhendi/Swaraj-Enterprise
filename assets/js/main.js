@@ -49,25 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Dynamic Footer Inclusion
-  const footerPlaceholder = document.getElementById('footer-placeholder');
-  if (footerPlaceholder) {
-    fetch('footer.html')
-      .then(response => {
-        if (!response.ok) throw new Error('Footer template not found');
-        return response.text();
-      })
-      .then(html => {
-        footerPlaceholder.innerHTML = html;
-        const yearSpan = document.getElementById('current-year');
-        if (yearSpan) {
-          yearSpan.textContent = new Date().getFullYear();
-        }
-      })
-      .catch(err => {
-        console.warn('Footer fetch warning:', err);
-      });
-  }
+
 
   // 4. Global Quote Modal Handler
   const quoteModal = document.getElementById('quote-modal');
@@ -98,6 +80,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 4b. Product Details Modal Close Handler
+  const productModal = document.getElementById('product-details-modal');
+  const closeProductBtn = document.getElementById('close-product-modal');
+
+  if (closeProductBtn && productModal) {
+    closeProductBtn.addEventListener('click', () => {
+      productModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    productModal.addEventListener('click', (e) => {
+      if (e.target === productModal) {
+        productModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
   // 5. Global Modal Form Submission & Toast Notifications
   const quoteForm = document.getElementById('quote-form');
 
@@ -121,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
     floatingStack = document.createElement('div');
     floatingStack.className = 'floating-widgets-stack';
     floatingStack.innerHTML = `
-      <a href="tel:+919890000000" class="floating-btn floating-btn-phone" aria-label="Call Us" title="Call Us Direct">
+      <a href="tel:+919960098355" class="floating-btn floating-btn-phone" aria-label="Call Us" title="Call Us Direct">
         <i class="fas fa-phone-alt"></i>
       </a>
-      <a href="https://wa.me/919890000000" target="_blank" class="floating-btn floating-btn-whatsapp" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <a href="https://wa.me/919960098355" target="_blank" class="floating-btn floating-btn-whatsapp" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
       <button class="floating-btn floating-btn-top" id="scroll-to-top-btn" aria-label="Scroll to Top" title="Scroll to Top">
@@ -150,6 +150,25 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       });
     });
+  }
+
+  // Scroll Animations Observer for .animate-up elements
+  const animatedElements = document.querySelectorAll('.animate-up');
+  if (animatedElements.length > 0) {
+    if ('IntersectionObserver' in window) {
+      const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            animationObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      animatedElements.forEach(el => animationObserver.observe(el));
+    } else {
+      animatedElements.forEach(el => el.classList.add('in-view'));
+    }
   }
 });
 

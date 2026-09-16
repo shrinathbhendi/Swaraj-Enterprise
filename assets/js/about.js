@@ -21,4 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, 150);
   }
+
+  // About Section Slider
+  const aboutSlides = document.querySelectorAll('.about-slide');
+  if (aboutSlides.length > 0) {
+    let currentAboutSlide = 0;
+    setInterval(() => {
+      // Fade out current
+      aboutSlides[currentAboutSlide].style.display = 'none';
+      aboutSlides[currentAboutSlide].classList.remove('active');
+      
+      // Move to next
+      currentAboutSlide = (currentAboutSlide + 1) % aboutSlides.length;
+      
+      // Fade in next
+      aboutSlides[currentAboutSlide].style.display = 'block';
+      aboutSlides[currentAboutSlide].classList.add('active');
+    }, 3500);
+  }
 });

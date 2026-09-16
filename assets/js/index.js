@@ -91,6 +91,24 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoSlide();
   }
 
+  // About Section Slider
+  const aboutSlides = document.querySelectorAll('.about-slide');
+  if (aboutSlides.length > 0) {
+    let currentAboutSlide = 0;
+    setInterval(() => {
+      // Fade out current
+      aboutSlides[currentAboutSlide].style.display = 'none';
+      aboutSlides[currentAboutSlide].classList.remove('active');
+      
+      // Move to next
+      currentAboutSlide = (currentAboutSlide + 1) % aboutSlides.length;
+      
+      // Fade in next
+      aboutSlides[currentAboutSlide].style.display = 'block';
+      aboutSlides[currentAboutSlide].classList.add('active');
+    }, 3500); // Change image every 3.5 seconds
+  }
+
   // Animated Counter Section on Scroll
   const counterElements = document.querySelectorAll('.counter-value');
   if (counterElements.length > 0) {
